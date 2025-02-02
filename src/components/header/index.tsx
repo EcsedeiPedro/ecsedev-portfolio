@@ -1,23 +1,34 @@
+"use client";
+
 import Link from "next/link";
 import { Container } from "../container";
 import { EcsedevLogo } from "../logo";
 import navItems from "./mock-data";
 import { Button } from "../ui/button";
-import { Menu } from "lucide-react";
-import {
-  Sheet,
-  SheetTrigger,
-  SheetContent,
-  SheetTitle,
-  SheetDescription,
-} from "../ui/sheet";
+import { useEffect, useState } from "react";
+import { MobileNav } from "./mobile-nav";
 
 export const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="fixed w-full top-0 bg-transparent py-6 px-4">
+    <nav
+      className={`fixed w-full top-0 py-6 px-4 z-[999] transition-all duration-300 ${
+        isScrolled ? "backdrop-blur-sm" : ""
+      }`}
+    >
       <Container className="flex justify-between items-center">
         <Link href="/">
-          <EcsedevLogo className="max-w-[140px] lg:max-w-full" fill="#BE3144" />
+          <EcsedevLogo className="max-w-[140px] lg:max-w-full" fill="#DC2626" />
         </Link>
 
         {/* desktop */}
@@ -33,32 +44,11 @@ export const Header = () => {
         </ul>
 
         <Button className="hidden lg:block bg-wine text-white">
-          Entre em Contato
+          contact me
         </Button>
 
         {/* mobile */}
-        <Sheet>
-          <SheetTrigger className="block lg:hidden">
-            <Menu className="block" color="white" />
-          </SheetTrigger>
-
-          <SheetContent>
-            <SheetTitle />
-
-            <SheetDescription />
-
-            <ul className="flex flex-col gap-6 lg:hidden py-10 px-4">
-              {navItems.map((item) => (
-                <li
-                  key={item.name}
-                  className="text-cerise font-medium text-sm lowercase"
-                >
-                  <Link href={item.href}>{item.name}</Link>
-                </li>
-              ))}
-            </ul>
-          </SheetContent>
-        </Sheet>
+        <MobileNav />
       </Container>
     </nav>
   );

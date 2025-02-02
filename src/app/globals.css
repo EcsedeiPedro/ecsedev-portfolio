@@ -74,6 +74,5 @@
 }
 
 .hero-gradient {
-  background: #09122c;
-  background: linear-gradient(153deg, #09122c 0%, rgba(51, 55, 69, 1) 100%);
+  background: linear-gradient(153deg, #000000 0%, #303030 100%);
 }
