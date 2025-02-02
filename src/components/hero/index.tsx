@@ -25,7 +25,7 @@ export const Hero = () => {
 
           <div className="hidden sm:flex justify-end w-1/2">
             <div className="relative 
-            w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] rounded-full bg-lightRed overflow-hidden">
+            w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] rounded-full bg-orange overflow-hidden">
               <Image
                 className="absolute bottom-0 w-full grayscale"
                 src="/images/pedro-ecsedei.png"
