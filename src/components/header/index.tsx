@@ -16,7 +16,9 @@ export const Header = () => {
   return (
     <nav className="fixed w-full top-0 bg-transparent py-6 px-4">
       <Container className="flex justify-between items-center">
-        <EcsedevLogo className="max-w-[140px] lg:max-w-full" fill="#E63462" />
+        <Link href="/">
+          <EcsedevLogo className="max-w-[140px] lg:max-w-full" fill="#BE3144" />
+        </Link>
 
         {/* desktop */}
         <ul className="hidden lg:flex gap-6">
@@ -30,10 +32,11 @@ export const Header = () => {
           ))}
         </ul>
 
-        <Button className="hidden lg:block bg-crayola text-white">
+        <Button className="hidden lg:block bg-wine text-white">
           Entre em Contato
         </Button>
 
+        {/* mobile */}
         <Sheet>
           <SheetTrigger className="block lg:hidden">
             <Menu className="block" color="white" />

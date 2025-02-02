@@ -19,9 +19,10 @@ export default {
   				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))'
   			},
-			gunMetal: "#333745",
-			cerise: "#E63462",
-			crayola: "#EF3054",
+			darkBlue: "#09122C",
+			lightRed: "#BE3144",
+			wine: "#872341",
+			orange: "#E17564",
   			white: '#F6F6F6',
   			black: '#303030',
   			background: 'hsl(var(--background))',
