@@ -20,11 +20,11 @@ export default {
           foreground: "hsl(var(--secondary-foreground))",
         },
         darkBlue: "#09122C",
-        lightRed: "#DC2626",
+        lightRed: "#F82A2B",
         wine: "#991B1B",
         orange: "#EA580C",
         white: "#F6F6F6",
-        black: "#303030",
+        black: "#272025",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
