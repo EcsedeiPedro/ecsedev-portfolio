@@ -8,6 +8,7 @@ import {
 } from "../ui/sheet";
 import Link from "next/link";
 import navItems from "./mock-data";
+import { Button } from "../ui/button";
 
 export const MobileNav = () => {
   return (
@@ -16,7 +17,7 @@ export const MobileNav = () => {
         <Menu className="block" color="white" />
       </SheetTrigger>
 
-      <SheetContent className="z-[1111]">
+      <SheetContent className="z-[1111] bg-white">
         <SheetTitle />
 
         <SheetDescription />
@@ -25,12 +26,16 @@ export const MobileNav = () => {
           {navItems.map((item) => (
             <li
               key={item.name}
-              className="text-cerise font-medium text-sm lowercase"
+              className="text-cerise font-medium text-lg lowercase"
             >
               <Link href={item.href}>{item.name}</Link>
             </li>
           ))}
         </ul>
+
+        <Button className="block lg:hidden bg-wine text-white">
+          contact me
+        </Button>
       </SheetContent>
     </Sheet>
   );
