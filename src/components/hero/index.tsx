@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const Hero = () => {
   return (
-    <section className="h-[500px] sm:h-screen">
+    <section className="h-[500px] sm:h-[67vh]">
       <Container className="px-4 flex flex-col h-full justify-center">
         <div className="flex flex-col sm:flex-row sm:items-center">
           <div className="w-1/2">
@@ -25,7 +25,7 @@ export const Hero = () => {
 
           <div className="hidden sm:flex justify-end w-1/2">
             <div className="relative 
-            w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] rounded-full bg-lightRed overflow-hidden">
+            w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] rounded-full bg-black overflow-hidden">
               <Image
                 className="absolute bottom-0 w-full grayscale"
                 src="/images/pedro-ecsedei.png"

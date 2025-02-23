@@ -4,7 +4,7 @@ import { aboutCards, aboutContent } from "./mock-data";
 
 export const About = () => {
   return (
-    <section className="px-4">
+    <section className="px-4 pb-10">
       <Container>
         <h2 className="text-lightRed text-3xl">about me</h2>
 
